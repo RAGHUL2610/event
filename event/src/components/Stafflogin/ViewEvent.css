@@ -1,0 +1,42 @@
+
+  .card {
+    margin: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    /* width: 1px; */
+
+  }
+  
+   .card-body {
+
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-subtitle {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-text {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .card-link {
+    color: #bc3c96;
+    text-decoration: none;
+    margin-right: 1rem;
+    
+  }
+  
+  .card-link:hover {
+    text-decoration: underline;
+  }
+   

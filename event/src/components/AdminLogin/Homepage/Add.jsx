@@ -10,34 +10,22 @@ export default function Add() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const navigate = useNavigate();
+  const navigatePage = useNavigate();
 
-  // useEffect(() => {
-  //   axios.get('http://localhost:2500/event/events')
-  //     .then(res => {
-  //       const data = res.data; 
-  //       setName(data.name);
-  //       setQualification(data.qualification);
-  //       setDept(data.department);
-  //       setEmail(data.email);
-  //       setPassword(data.password);
-  //     })
-  //     .catch(err => console.log(err));
-  // }, []);
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
     axios.post('http://localhost:2500/staff/adduser', {
-      Name: name,
-      Qualification: qualification,
-      Department: dept,
-      Email: email,
-      Password: password
-    })
-      .then(response => {
-        alert("Success");
-        navigate('/AdminHome/view-event');
-      })
+      Sname: name,
+      Squalification: qualification,
+      SDepartment: dept,
+      SEmail: email,
+      SPassword: password
+    }).then(
+        alert("Success"),
+        navigatePage('/AdminHome/view-event')
+      )
       .catch(err => {
         console.error('Error:', err);
       });

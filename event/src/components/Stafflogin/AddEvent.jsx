@@ -42,6 +42,7 @@ export default function AddEvent() {
         }
       });
       console.log(response.data);
+      window.location.reload();
       // Handle success response
     } catch (error) {
       console.error('Error:', error.response.data);
